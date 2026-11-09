@@ -1,46 +1,46 @@
 # Career-OS Product & Build Documentation
 
-This folder is the working source of truth for product discovery, requirements, architecture, delivery, and launch.
+## Current product direction
+Career OS is an AI-assisted job-search operating system. It onboards a candidate profile and resume, discovers jobs from configurable platforms and official employer career portals, scores and deduplicates opportunities, prepares tailored application documents, tracks activity, and supports user-authorized application and recruiter outreach workflows.
 
-## Status
+Two deployment editions:
+- Self-hosted edition for local machines or user-managed infrastructure.
+- Public web edition with a static frontend where suitable (for example GitHub Pages) and separately hosted backend, database, workers and secret storage.
 
-**Planning scaffold — product definition is not yet validated.** The repository name alone does not establish what Career-OS does. Do not infer target users, workflows, business model, or features from the name. Replace every `[TBD]` with evidence-backed decisions before implementation.
+## Source of truth and configuration
+- Product requirements and decisions live in this folder and root project-control files.
+- User-editable source seeds live in config/platforms.txt, config/companyportals.txt and config/recruitment_sources.txt.
+- See config/README.md for formats and editing instructions.
+- Text files are seed/default configuration, not proof that a source has a functioning scraper.
+- Database is authoritative for job records, application status, source health and per-user overrides.
 
 ## Documents
-
 | Order | Document | Purpose |
 |---|---|---|
-| 00 | [Product discovery](00-product-discovery.md) | Problem evidence, users, alternatives, validation |
-| 01 | [PRD](01-prd.md) | Scope, requirements, user stories, outcomes |
-| 02 | [App flow](02-app-flow.md) | Screens, navigation, journeys, states |
-| 03 | [UI/UX brief](03-ui-ux-brief.md) | Interaction and visual system |
-| 04 | [Technical requirements](04-technical-requirements.md) | Architecture, stack, integrations, constraints |
-| 05 | [Data model & security](05-data-model-security.md) | Entities, access rules, privacy and retention |
-| 06 | [Implementation plan](06-implementation-plan.md) | Sequenced delivery and acceptance gates |
-| 07 | [Quality plan](07-quality-plan.md) | Testing, observability, reliability |
-| 08 | [Launch & operations](08-launch-operations.md) | Release, support, incident response |
-| 09 | [Cost model](09-cost-model.md) | Build and operating cost assumptions |
-| 10 | [Decision log](10-decision-log.md) | Record decisions and their rationale |
+| 00 | Product discovery | Problem evidence, users, alternatives, validation |
+| 01 | PRD | Scope, requirements, user stories, outcomes |
+| 02 | App flow | Screens, navigation, journeys, states |
+| 03 | UI/UX brief | Interaction and visual system |
+| 04 | Technical requirements | Architecture, stack, integrations, constraints |
+| 05 | Data model & security | Entities, access rules, privacy and retention |
+| 06 | Implementation plan | Sequenced delivery and acceptance gates |
+| 07 | Quality plan | Testing, observability, reliability |
+| 08 | Launch & operations | Release, support, incident response |
+| 09 | Cost model | Build and operating cost assumptions |
+| 10 | Decision log | Record decisions and rationale |
 
 ## Working rules
+1. Validate the highest-risk assumptions with users and live source tests.
+2. Keep the first release narrow.
+3. Mark unknowns as TBD; never let an AI agent silently invent requirements.
+4. Record consequential decisions.
+5. Never commit credentials, API keys, real personal data or production secrets.
+6. Treat generated code as untrusted until reviewed and tested.
+7. Reuse compatible open-source projects before writing replacements; audit licenses and maintenance first.
+8. Never mark an application submitted unless submission is confirmed.
+9. Require explicit user confirmation before sending recruiter emails or submitting applications.
 
-1. Evidence before features. Interview and observe intended users; do not treat founder intuition as validation.
-2. Keep the first release narrow. Every MVP feature must support the primary user outcome.
-3. Mark unknowns as `[TBD]`; never let an AI agent silently invent requirements.
-4. Record consequential decisions in the decision log.
-5. Update these documents when implementation or user evidence changes the plan.
-6. Never put credentials, API keys, real personal data, or production secrets in this repository.
-7. Treat generated code as untrusted until reviewed, tested, and checked for security.
+## Important constraints
+GitHub Pages can host a static frontend; it cannot host backend, database, Selenium/Chromium workers, n8n or secrets. The public edition needs separately hosted backend infrastructure.
 
-## First decisions required
-
-- What specific career-related problem is Career-OS solving?
-- Who experiences it most acutely, and who would pay or sponsor the solution?
-- What is the single primary outcome the MVP must deliver?
-- What evidence demonstrates that this problem is frequent, costly, and underserved?
-
-## Suggested workflow
-
-Discovery → PRD → app flow and UX → technical architecture and data/security model → implementation plan → build in small vertical slices → test → pilot → launch.
-
-Do not spend weeks polishing documents. The purpose is to expose uncertainty and guide a small, testable release—not to create paperwork.
+A website added to a source file is not automatically scrapeable. It needs a registered, tested adapter and permitted access method.

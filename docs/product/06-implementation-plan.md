@@ -1,78 +1,57 @@
 # 06 — Implementation Plan
 
-**Status:** Sequencing template; do not start feature development until the discovery gate is met.
+**Status:** Product direction established; implementation sequence subject to repository and open-source audit.
 
 ## Delivery principles
+- Build one end-to-end workflow at a time.
+- Reuse open-source projects when licensing, maintenance, security and architecture are compatible.
+- Keep changes small and reviewable.
+- Every task needs acceptance criteria and tests.
+- Update state, tracker, research, test results and handoff after each milestone.
 
-- Build one end-to-end user workflow at a time.
-- Keep pull requests small and reviewable.
-- Each task has an owner, acceptance criteria, tests, and rollback consideration.
-- Do not ask an AI coding agent to implement the entire product in one prompt.
-- Update the docs when decisions change.
+## Phase 0 — Open-source and source research
+- Inspect JobSpy, job-hunter, LinkedIn-Job-Scraper, career-ops, ai-job-search and ai-job-search-au.
+- Identify and evaluate Agent-Reach and adjacent open-source tools.
+- Record revision, license, maintenance, dependencies, supported sources, tests, security and reuse decision.
+- Research Indian job platforms, IT employers, MANGOS companies, career portals and consultancies.
+- Populate source seeds with provenance and verification status.
 
-## Phase 0 — Validate the problem
+Exit: research register contains evidence-based decisions; no unverified source is represented as a working scraper.
 
-**Deliverables:** completed discovery evidence, target segment, problem statement, validation decision.  
-**Exit criteria:** discovery go/no-go gate passed.  
-**Do not:** build a broad platform based on assumptions.
+## Phase 1 — Validate the MVP
+Define target user, primary problem, workflow, validation evidence and success metrics.
 
-## Phase 1 — Define the MVP
+## Phase 2 — Candidate profile and documents
+Implement onboarding, resume upload/parsing, editable profile and secure document storage.
 
-**Deliverables:** approved PRD, primary journey, out-of-scope list, measurable success metrics.  
-**Exit criteria:** every MVP requirement has acceptance criteria.
+## Phase 3 — Job discovery and adapters
+- Define a common adapter interface.
+- Load config/platforms.txt and config/companyportals.txt dynamically.
+- Parse comments, blank lines, exact field counts, enabled flags and URLs.
+- Validate and deduplicate source entries.
+- Report unsupported sources; never silently skip.
+- Add health checks, retries, rate limits and last-checked timestamps.
+- Prefer APIs/structured feeds; use browser automation only where appropriate and permitted.
 
-## Phase 2 — Design and architecture
+Exit: fixtures cover valid, malformed, duplicate, disabled, pending and unavailable sources; enabled adapters have integration tests.
 
-**Deliverables:** screen flows, UI brief / wireframes, architecture decision, data model, threat model, cost estimate.  
-**Exit criteria:** core workflow and data access rules reviewed.
+## Phase 4 — Matching and tracker
+Normalize jobs, deduplicate across sources, score against candidate preferences, persist status history and export Excel. Distinguish discovered, shortlisted, prepared, apply-page-opened, submitted-confirmed, interview, rejected and offer.
 
-## Phase 3 — Repository and engineering foundation
+## Phase 5 — Tailored application documents
+Preserve original job descriptions. Generate ATS-oriented resumes, cover letters and answers from verified candidate information only. Detect fabricated claims and version documents per job.
 
-Tasks:
-- Confirm runtime, framework, and package manager.
-- Establish folder structure and local setup instructions.
-- Add formatting, linting, type checks, and automated tests.
-- Configure environment variable validation and safe example config.
-- Configure CI and branch protections where appropriate.
+## Phase 6 — User-authorized application assistance
+Assist with supported form fields. Require explicit confirmation before final submission. Never bypass CAPTCHA, authentication, access controls or anti-bot protections.
 
-**Exit criteria:** a clean clone can install, test, and run locally.
+## Phase 7 — Daily automation and recruiter outreach
+Use self-hosted n8n for orchestration. Keep the database authoritative. Make reruns idempotent. Verify recruiter contact provenance and require approval before sending email.
 
-## Phase 4 — Vertical slice 1
+## Phase 8 — Deployment
+Package self-hosted mode with persistent storage and local config overrides. Public mode needs authentication, tenant isolation, hosted backend, database, workers, file storage and secret management.
 
-Implement the smallest complete primary user journey across UI, API, persistence, authorization, and error handling.
-
-**Exit criteria:** acceptance criteria pass; unauthorized access is tested; no critical security findings.
-
-## Phase 5 — Remaining MVP capabilities
-
-Implement only Must-have requirements in dependency order. Revisit scope when effort exceeds the validation value.
-
-## Phase 6 — Hardening
-
-- Unit, integration, and end-to-end tests.
-- Accessibility and responsive checks.
-- Security and dependency scans.
-- Backup / restore test if persistent production data exists.
-- Performance baseline and observability.
-- User acceptance testing with target users.
-
-## Phase 7 — Pilot and launch
-
-Release to a small, defined cohort. Monitor the primary outcome, task completion, support burden, and incidents. Decide whether to iterate, expand, or stop.
-
-## Task tracker
-
-| ID | Task | Phase | Priority | Owner | Acceptance criteria | Status |
-|---|---|---|---|---|---|---|
-| TASK-001 | [TBD] | [TBD] | [TBD] | [TBD] | [TBD] | Not started |
+## Phase 9 — Hardening
+Run unit, integration, E2E, Chromium, accessibility, security, dependency, backup/restore and recovery tests.
 
 ## Definition of Done
-
-- Requirement and acceptance criteria are met.
-- Code is reviewed and follows project conventions.
-- Automated tests pass.
-- Authorization and validation are covered.
-- No secrets or real personal data are committed.
-- Loading, empty, success, and failure states are handled.
-- Documentation and operational notes are updated.
-- Deployment and rollback impact are understood.
+Acceptance criteria pass; code reviewed; automated tests run and recorded; authorization and validation covered; no secrets committed; failure states handled; docs and tracker updated; deployment and rollback understood.

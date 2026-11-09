@@ -1,0 +1,34 @@
+# CAREER OS - JOB PLATFORMS
+# Format: Platform Name | Base URL | Adapter ID | Enabled
+# UTF-8 plain text. One entry per line. Comments (#) and blank lines are ignored.
+# Enabled must be true or false. Adapter ID must match a registered adapter.
+# "pending" means listed but no tested adapter is currently confirmed.
+# Adding a URL does not automatically create scraper support.
+# Users can edit this file in any text editor and commit/push their changes.
+# Never put API keys, cookies, passwords or personal data here.
+
+LinkedIn Jobs | https://www.linkedin.com/jobs/ | pending | false
+Naukri | https://www.naukri.com/ | jobspy | true
+Indeed India | https://in.indeed.com/ | jobspy | true
+Glassdoor India | https://www.glassdoor.co.in/Job/ | jobspy | true
+Foundit | https://www.foundit.in/ | pending | false
+TimesJobs | https://www.timesjobs.com/ | pending | false
+Shine | https://www.shine.com/ | pending | false
+Hirist | https://www.hirist.com/ | pending | false
+IIMJobs | https://www.iimjobs.com/ | pending | false
+Instahyre | https://www.instahyre.com/ | pending | false
+Cutshort | https://cutshort.io/ | pending | false
+Wellfound | https://wellfound.com/ | pending | false
+Internshala | https://internshala.com/ | pending | false
+Freshersworld | https://www.freshersworld.com/ | pending | false
+Unstop | https://unstop.com/ | pending | false
+Apna | https://apna.co/ | pending | false
+WorkIndia | https://www.workindia.in/ | pending | false
+Hirect | https://hirect.in/ | pending | false
+Hasjob | https://hasjob.co/ | pending | false
+ZipRecruiter | https://www.ziprecruiter.com/ | jobspy | false
+Bayt | https://www.bayt.com/ | jobspy | false
+Remote OK | https://remoteok.com/ | pending | false
+We Work Remotely | https://weworkremotely.com/ | pending | false
+Remotive | https://remotive.com/ | pending | false
+Hacker News Who is Hiring | https://news.ycombinator.com/ | pending | false
