@@ -1,0 +1,97 @@
+# CAREER OS - OFFICIAL COMPANY CAREER PORTALS
+# Format: Company Name | Official Careers URL | Market | Category | Enabled
+# Use official employer-owned career pages, not job-board result URLs.
+# Enabled must be true or false. The URL is a discovery seed, not proof of scraper support.
+# MANGOS = Microsoft, Amazon, Netflix, Google, Oracle and Salesforce.
+# This is a starter list, not an exhaustive census of every IT company in India.
+# Users can add/remove/edit entries in a text editor and push changes.
+
+# MANGOS
+Microsoft | https://careers.microsoft.com/ | India+Global | MANGOS | true
+Amazon / AWS | https://www.amazon.jobs/ | India+Global | MANGOS | true
+Netflix | https://jobs.netflix.com/ | India+Global | MANGOS | true
+Google | https://www.google.com/about/careers/ | India+Global | MANGOS | true
+Oracle | https://www.oracle.com/careers/ | India+Global | MANGOS | true
+Salesforce | https://www.salesforce.com/company/careers/ | India+Global | MANGOS | true
+
+# Other global technology and consulting employers
+Meta | https://www.metacareers.com/ | India+Global | Product | true
+Apple | https://www.apple.com/careers/ | India+Global | Product | true
+NVIDIA | https://www.nvidia.com/en-us/about-nvidia/careers/ | India+Global | AI-Hardware | true
+OpenAI | https://openai.com/careers/ | India+Global | AI | true
+Anthropic | https://www.anthropic.com/careers | India+Global | AI | true
+SpaceX | https://www.spacex.com/careers/ | Global | Aerospace-Tech | false
+Adobe | https://careers.adobe.com/ | India+Global | Product | true
+IBM | https://www.ibm.com/careers/ | India+Global | Enterprise-Tech | true
+Cisco | https://jobs.cisco.com/ | India+Global | Networking | true
+Intel | https://jobs.intel.com/ | India+Global | Semiconductor | true
+AMD | https://careers.amd.com/ | India+Global | Semiconductor | true
+Qualcomm | https://careers.qualcomm.com/ | India+Global | Semiconductor | true
+Dell Technologies | https://jobs.dell.com/ | India+Global | Enterprise-Tech | true
+HP | https://jobs.hp.com/ | India+Global | Enterprise-Tech | true
+HPE | https://careers.hpe.com/ | India+Global | Enterprise-Tech | true
+SAP | https://jobs.sap.com/ | India+Global | Enterprise-Software | true
+Broadcom | https://careers.broadcom.com/ | India+Global | Semiconductor | true
+ServiceNow | https://careers.servicenow.com/ | India+Global | SaaS | true
+Workday | https://workday.wd5.myworkdayjobs.com/Workday | India+Global | SaaS | true
+Atlassian | https://www.atlassian.com/company/careers | India+Global | SaaS | true
+Uber | https://www.uber.com/us/en/careers/ | India+Global | Product | true
+Airbnb | https://careers.airbnb.com/ | India+Global | Product | true
+Booking.com | https://jobs.booking.com/ | India+Global | Product | true
+PayPal | https://www.paypal.com/us/webapps/mpp/jobs | India+Global | Fintech | true
+Stripe | https://stripe.com/jobs | India+Global | Fintech | true
+JPMorgan Chase | https://careers.jpmorgan.com/ | India+Global | BFSI-Tech | true
+Goldman Sachs | https://www.goldmansachs.com/careers | India+Global | BFSI-Tech | true
+Morgan Stanley | https://www.morganstanley.com/people-opportunities | India+Global | BFSI-Tech | true
+Accenture | https://www.accenture.com/in-en/careers | India | IT-Services | true
+Capgemini | https://www.capgemini.com/in-en/careers/ | India | IT-Services | true
+Cognizant | https://careers.cognizant.com/india-en/ | India | IT-Services | true
+Deloitte | https://www.deloitte.com/global/en/careers.html | India+Global | Consulting | true
+EY | https://www.ey.com/en_in/careers | India | Consulting | true
+KPMG | https://kpmg.com/in/en/home/careers.html | India | Consulting | true
+PwC | https://www.pwc.in/careers.html | India | Consulting | true
+
+# Indian IT services and engineering companies
+TCS | https://www.tcs.com/careers | India | IT-Services | true
+Infosys | https://www.infosys.com/careers/ | India | IT-Services | true
+Wipro | https://careers.wipro.com/ | India | IT-Services | true
+HCLTech | https://www.hcltech.com/careers | India | IT-Services | true
+Tech Mahindra | https://www.techmahindra.com/en-in/careers/ | India | IT-Services | true
+LTIMindtree | https://www.ltimindtree.com/careers/ | India | IT-Services | true
+Mphasis | https://careers.mphasis.com/ | India | IT-Services | true
+Persistent Systems | https://www.persistent.com/careers/ | India | IT-Services | true
+Coforge | https://www.coforge.com/careers | India | IT-Services | true
+Hexaware | https://hexaware.com/careers/ | India | IT-Services | true
+KPIT Technologies | https://www.kpit.com/careers/ | India | Engineering-Tech | true
+Cyient | https://www.cyient.com/careers | India | Engineering-Tech | true
+Birlasoft | https://www.birlasoft.com/careers | India | IT-Services | true
+Zensar Technologies | https://www.zensar.com/careers | India | IT-Services | true
+Sonata Software | https://www.sonata-software.com/careers | India | IT-Services | true
+
+# Indian product, SaaS, fintech and internet companies
+Zoho | https://www.zoho.com/careers/ | India | Product-SaaS | true
+Freshworks | https://www.freshworks.com/company/careers/ | India+Global | Product-SaaS | true
+Postman | https://www.postman.com/company/careers/ | India+Global | Product-SaaS | true
+BrowserStack | https://www.browserstack.com/careers | India+Global | Product-SaaS | true
+Razorpay | https://razorpay.com/jobs/ | India | Fintech | true
+PhonePe | https://www.phonepe.com/careers/ | India | Fintech | true
+Flipkart | https://www.flipkartcareers.com/ | India | Ecommerce | true
+Myntra | https://careers.myntra.com/ | India | Ecommerce | true
+Swiggy | https://careers.swiggy.com/ | India | Internet | true
+Zomato / Eternal | https://www.eternal.com/careers/ | India | Internet | true
+Meesho | https://www.meesho.io/jobs | India | Ecommerce | true
+Groww | https://groww.in/careers | India | Fintech | true
+Zerodha | https://zerodha.com/careers/ | India | Fintech | true
+CRED | https://careers.cred.club/ | India | Fintech | true
+Dream11 | https://www.dreamsports.group/careers | India | Internet | true
+InMobi | https://www.inmobi.com/company/careers | India | AdTech | true
+Juspay | https://juspay.io/careers | India | Fintech | true
+Chargebee | https://www.chargebee.com/careers/ | India+Global | SaaS | true
+Druva | https://www.druva.com/about/careers | India+Global | SaaS | true
+Hasura | https://hasura.io/careers/ | India+Global | Developer-Tools | true
+Amagi | https://www.amagi.com/careers | India | SaaS | true
+Thoughtworks | https://www.thoughtworks.com/careers | India+Global | Engineering | true
+Red Hat | https://www.redhat.com/en/jobs | India+Global | Enterprise-Software | true
+Elastic | https://www.elastic.co/about/careers | India+Global | Developer-Tools | true
+GitLab | https://about.gitlab.com/jobs/ | India+Global | Developer-Tools | true
+GitHub | https://github.com/about/careers | India+Global | Developer-Tools | true

@@ -1,0 +1,31 @@
+# CAREER OS - RECRUITMENT CONSULTANCIES AND STAFFING SOURCES
+# Format: Consultancy Name | Official Website URL | Geography | Specialization | Enabled
+# These are organization-level research seeds, NOT verified individual recruiter emails.
+# Verify the official site, contact route and service focus before outreach.
+# Do not bulk-email scraped personal addresses. Follow privacy and anti-spam rules.
+# Users can add/remove/edit entries in a text editor and push changes.
+
+Quess Corp | https://www.quesscorp.com/ | India | Staffing-IT-General | true
+TeamLease | https://www.teamlease.com/ | India | Staffing-General | true
+Experis | https://www.experisindia.com/ | India | IT-Technology | true
+Careernet | https://www.careernet.in/ | India | Technology-Recruitment | true
+Xpheno | https://www.xpheno.com/ | India | Technology-Recruitment | true
+Taggd | https://taggd.in/ | India | Recruitment-Technology | true
+CIEL HR | https://www.cielhr.com/ | India | Staffing-General | true
+Collabera | https://www.collabera.com/ | India+Global | IT-Staffing | true
+Michael Page India | https://www.michaelpage.co.in/ | India | Professional-Recruitment | true
+ABC Consultants | https://www.abcconsultants.in/ | India | Professional-Recruitment | true
+Zyoin | https://www.zyoin.com/ | India | Technology-Recruitment | true
+Sampoorna Consultants | https://www.sampoorna.com/ | India | IT-Recruitment | true
+ALP Consulting | https://www.alpconsulting.in/ | India | IT-Staffing | true
+NLB Services | https://www.nlbservices.com/ | India+Global | IT-Staffing | true
+Uplers | https://www.uplers.com/ | India+Global | Technology-Talent | true
+Talent500 | https://talent500.com/ | India+Global | Technology-Talent | true
+CareerXperts | https://www.careerxperts.com/ | India | Technology-Recruitment | true
+SutraHR | https://www.sutrahr.com/ | India | Startup-Recruitment | true
+HuntingCube | https://www.huntingcube.com/ | India | Technology-Recruitment | true
+GlobalHunt | https://www.globalhunt.in/ | India | Professional-Recruitment | true
+Randstad India | https://www.randstad.in/ | India | Staffing-General | true
+Adecco India | https://www.adecco.co.in/ | India | Staffing-General | true
+ManpowerGroup India | https://www.manpowergroup.co.in/ | India | Staffing-General | true
+Kelly Services India | https://www.kellyservices.co.in/ | India | Staffing-General | true
