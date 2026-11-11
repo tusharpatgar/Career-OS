@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Career OS — Source configuration</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="mark" aria-hidden="true">CO</div>
+          <div>
+            <h1>Career OS</h1>
+            <p class="tagline">Source configuration &amp; adapter health</p>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <span class="timestamp" id="generated">loading…</span>
+          <button class="ghost" id="refresh" type="button">Refresh</button>
+        </div>
+      </header>
+
+      <section class="summary" id="summary" aria-label="Summary"></section>
+
+      <section class="panel">
+        <nav class="tabs" id="tabs" role="tablist" aria-label="Source views"></nav>
+
+        <div class="toolbar">
+          <label class="search">
+            <span class="sr-only">Search sources</span>
+            <input id="search" type="search" placeholder="Search name, URL, market or adapter…" autocomplete="off" />
+          </label>
+          <label class="filter">
+            <span class="sr-only">Filter by status</span>
+            <select id="status-filter"></select>
+          </label>
+          <label class="toggle">
+            <input id="enabled-only" type="checkbox" />
+            <span>Enabled only</span>
+          </label>
+          <span class="result-count" id="result-count"></span>
+        </div>
+
+        <div id="content" class="content" aria-live="polite"></div>
+      </section>
+
+      <footer class="footer">
+        <p>
+          A registered URL is <strong>not</strong> scraper support. Only sources with a registered,
+          tested and healthy adapter are reported as supported; everything else stays visible as
+          pending, disabled, unavailable or blocked.
+        </p>
+        <p class="muted" id="paths"></p>
+      </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

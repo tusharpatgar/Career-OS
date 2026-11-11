@@ -14,8 +14,8 @@ Statuses: Not started, In progress, Blocked, Done. Mark Done only after acceptan
 | COS-008 | Sources | Expand India IT employer/career portal list | P0 | In progress | Official URL, category, provenance and verification date per entry |
 | COS-009 | Sources | Expand Indian job platform list | P0 | In progress | Entries classified by adapter status; unsupported sources not marked active |
 | COS-010 | Sources | Expand consultancy/staffing list | P1 | In progress | Official website verified; no unverified personal emails |
-| COS-011 | Architecture | Implement source config parser | P0 | Not started | Tests cover comments, blanks, malformed rows, duplicates, URLs and flags |
-| COS-012 | Architecture | Define adapter registry and health states | P0 | Not started | Unsupported sources visible; adapters independently testable |
+| COS-011 | Architecture | Implement source config parser | P0 | Done | Tests cover comments, blanks, malformed rows, duplicates, URLs and flags |
+| COS-012 | Architecture | Define adapter registry and health states | P0 | Done | Unsupported sources visible; adapters independently testable |
 | COS-013 | Candidate | Candidate onboarding and resume parsing | P1 | Not started | Upload, parse, edit, validate and secure storage |
 | COS-014 | Discovery | Normalize and deduplicate job records | P0 | Not started | Cross-source duplicates resolve to one stable job |
 | COS-015 | Tracker | Persistent tracker and Excel export | P0 | Not started | Status history and exports tested |
@@ -25,7 +25,15 @@ Statuses: Not started, In progress, Blocked, Done. Mark Done only after acceptan
 | COS-019 | Outreach | Consultancy/recruiter email workflow | P2 | Not started | Verified contact provenance; send requires approval |
 | COS-020 | Deployment | Self-hosted packaging | P1 | Not started | Clean install, persistent storage and local overrides |
 | COS-021 | Deployment | Public edition | P2 | Not started | Authentication, tenant isolation, backend and secret storage |
-| COS-022 | Quality | Unit, integration, E2E, Chromium and security tests | P0 | Not started | CI runs required suites; failures block release |
+| COS-022 | Quality | Unit, integration, E2E, Chromium and security tests | P0 | In progress | CI runs required suites; failures block release |
 | COS-023 | Research | Evaluate AntiJobBoard | P2 | Not started | Capabilities, access, data quality and terms recorded |
+| COS-024 | GUI | Source configuration dashboard shell | P1 | Done | Renders parsed sources, statuses and issues from live config; read-only |
+| COS-025 | GUI | Source editing with authentication and override storage | P2 | Not started | Authenticated write path; per-user overrides isolated; audit trail |
 
 Update this tracker whenever status changes. Include commit/PR links and test evidence. Never mark work Done based only on generated code.
+
+## Evidence
+
+- COS-011 / COS-012: `careeros/sources/` implemented; `PYTHONPATH=.deps python3 -m pytest -q` → 48 passed on 2026-11-11. Tests: `tests/test_source_config.py`, `tests/test_source_registry.py`.
+- COS-024: `careeros/web/` implemented; live API verified locally (`/api/snapshot` → 131 sources, 0 issues); tests: `tests/test_web_snapshot.py`.
+- COS-024 is read-only by design: no authenticated write path exists yet, so editing config through the GUI is not offered.

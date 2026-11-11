@@ -1,0 +1,11 @@
+[project]
+name = "careeros"
+version = "0.1.0"
+description = "Career OS - AI-assisted job-search operating system"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"

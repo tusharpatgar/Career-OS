@@ -70,12 +70,22 @@ When context is running low:
 4. Write one precise next action.
 A new Claude session or another model/API provider must read these repository files and resume without recreating completed work.
 
+## Implemented runtime (2026-11-11)
+- `careeros/sources/parser.py` — spec-driven parser for the three config files: comments, blanks, exact field counts, name/URL/boolean/adapter validation, duplicate detection, `SourceIssue` reports with file and line.
+- `careeros/sources/loader.py` — repository defaults plus optional override directory, merged by normalized source name with `origin` provenance.
+- `careeros/sources/registry.py` — adapter registry and health states; only `supported` is scrapeable. `jobspy` is deliberately `pending` (no adapter implemented).
+- `careeros/web/` — read-only GUI + `/api/snapshot` JSON, standard library only. Start: `python3 -m careeros.web.server --port 8000`.
+- Tests: `PYTHONPATH=.deps python3 -m pytest -q` → 48 passed. See TEST_RESULTS.md for exact output.
+- Run instructions: docs/run-locally.md. Decisions: DEC-011 … DEC-014.
+- Current live snapshot: 131 sources (25 platforms / 82 portals / 24 consultancies), 0 validation issues, 108 pending, 23 disabled, 0 supported.
+
 ## Next tasks
-1. Audit all listed open-source projects and Agent-Reach.
-2. Expand and verify Indian IT company, job platform and consultancy lists.
-3. Build and test the source config parser and adapter registry.
-4. Implement one working job discovery vertical slice.
-5. Update tracker and handoff after every milestone.
+1. Audit all listed open-source projects and Agent-Reach (COS-001 … COS-007); record evidence in RESEARCH_REGISTER.md and record the reuse decision.
+2. Expand and verify Indian IT company, job platform and consultancy lists (COS-008 … COS-010).
+3. Decide the full application stack in docs/product/04-technical-requirements.md before adding a database or API framework (DEC-011 is scoped to the source layer only).
+4. Implement one tested adapter behind the existing registry interface, then set its health to `supported` only when tests pass.
+5. Implement one working job discovery vertical slice: adapter → normalized job record → dedupe → DB.
+6. Update tracker, tests, state and handoff after every milestone.
 
 ## Git approval
 The user authorized this specific configuration and handoff update to project-creater. This does not authorize future pushes. Show changes and obtain approval for future pushes. Never push to main without explicit instruction.
